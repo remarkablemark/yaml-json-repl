@@ -1,7 +1,7 @@
 {
-  "name": "web-app-template",
+  "name": "yaml-json-repl",
   "version": "0.0.1",
-  "description": "A template for framework-agnostic web apps.",
+  "description": "A web-based REPL that transforms YAML to JSON.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "node scripts/build",
@@ -14,19 +14,21 @@
     "release": "standard-version --no-verify",
     "start": "node scripts/start"
   },
-  "homepage": "https://remarkablemark.github.io/web-app-template/",
+  "homepage": "https://remarkablemark.github.io/yaml-json-repl/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/remarkablemark/web-app-template"
+    "url": "https://github.com/remarkablemark/yaml-json-repl"
   },
   "bugs": {
-    "url": "https://github.com/remarkablemark/web-app-template/issues"
+    "url": "https://github.com/remarkablemark/yaml-json-repl/issues"
   },
   "keywords": [
-    "web",
-    "app",
-    "template",
-    "boilerplate"
+    "yaml",
+    "json",
+    "transformer",
+    "converter",
+    "repl",
+    "web"
   ],
   "devDependencies": {
     "@commitlint/cli": "6.2.0",
@@ -64,16 +66,6 @@
     "webpack": "3.12.0",
     "webpack-dev-server": "2.11.2",
     "webpack-manifest-plugin": "2.0.2"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint:fix",
-      "git add"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "private": true,
   "license": "MIT"
