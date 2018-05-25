@@ -28,6 +28,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!--
+      CodeMirror styles.
+    -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.css">
   </head>
 
   <body>
@@ -42,9 +47,21 @@
     </noscript>
 
     <!--
-      Placeholder element.
+      Editors.
     -->
-    <div id="app"></div>
+    <main>
+      <textarea id="editor1" placeholder="YAML"></textarea>
+      <textarea id="editor2" placeholder="JSON"></textarea>
+    </main>
+
+    <!--
+      CodeMirror scripts.
+    -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/addon/display/placeholder.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/addon/selection/active-line.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/yaml/yaml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/javascript/javascript.min.js"></script>
 
     <!--
       This HTML file is a template.
