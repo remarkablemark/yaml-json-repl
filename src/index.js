@@ -1,4 +1,4 @@
-import './index.css';
+import './styles.css';
 import registerServiceWorker from './registerServiceWorker';
 const { CodeMirror, jsyaml } = window;
 
