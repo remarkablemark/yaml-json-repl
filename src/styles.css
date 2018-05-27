@@ -31,7 +31,7 @@ pre.CodeMirror-placeholder {
   color: #999;
 }
 
-.error {
+:local .error {
   background-color: #ffeeee;
   color: #ff0000;
 }
