@@ -1,4 +1,5 @@
-import './styles.css';
+import { addClass, removeClass, capitalize } from './helpers';
+import classes from './styles.css';
 import registerServiceWorker from './registerServiceWorker';
 const { CodeMirror, jsyaml } = window;
 
@@ -41,6 +42,13 @@ const editor2 = CodeMirror.fromTextArea(document.getElementById('editor2'), {
 });
 
 /**
+ * JSON CodeMirror editor element.
+ *
+ * @const {HTMLDivElement}
+ */
+const editor2Element = editor2.getWrapperElement();
+
+/**
  * Add extra keys to YAML editor.
  *
  * @const {Object}
@@ -81,15 +89,19 @@ editor1.setOption('extraKeys', {
 editor1.on('change', cm => {
   const value = cm.getValue();
   if (!value.trim()) {
-    return editor2.setValue('');
+    removeClass(editor2Element, classes.error);
+    editor2.setValue('');
+    return;
   }
 
   try {
     const js = jsyaml.load(cm.getValue());
     const json = JSON.stringify(js, null, 2);
+    removeClass(editor2Element, classes.error);
     editor2.setValue(json);
   } catch (error) {
-    editor2.setValue(`${error.name}: ${error.message}`);
+    addClass(editor2Element, classes.error);
+    editor2.setValue(capitalize(error.message));
   }
 });
 
