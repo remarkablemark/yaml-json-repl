@@ -11,24 +11,26 @@ const editorOptions = {
   inputStyle: 'contenteditable',
   lineNumbers: true,
   lineWrapping: true,
-  styleActiveLine: true,
-  tabSize: 2,
   theme: 'default',
 };
 
 /**
- * YAML CodeMirror editor on the left (editable).
+ * YAML CodeMirror editor instance (left).
  *
  * @const {Object}
  */
 const editor1 = CodeMirror.fromTextArea(document.getElementById('editor1'), {
   ...editorOptions,
   autofocus: true,
+  gutters: ['CodeMirror-lint-markers'],
+  lint: true,
   mode: 'yaml',
+  styleActiveLine: true,
+  tabSize: 2,
 });
 
 /**
- * JSON CodeMirror editor on the left (readonly).
+ * JSON CodeMirror editor instance (right).
  *
  * @const {Object}
  */
@@ -74,7 +76,7 @@ editor1.setOption('extraKeys', {
 });
 
 /**
- * Converts YAML to JSON on editor change and displays errors if applicable.
+ * Convert YAML to JSON on editor change and display errors if thrown.
  */
 editor1.on('change', cm => {
   const value = cm.getValue();
