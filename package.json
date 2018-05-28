@@ -14,22 +14,7 @@
     "release": "standard-version --no-verify",
     "start": "node scripts/start"
   },
-  "homepage": "https://remarkablemark.github.io/yaml-json-repl/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/remarkablemark/yaml-json-repl"
-  },
-  "bugs": {
-    "url": "https://github.com/remarkablemark/yaml-json-repl/issues"
-  },
-  "keywords": [
-    "yaml",
-    "json",
-    "transformer",
-    "converter",
-    "repl",
-    "web"
-  ],
+  "homepage": "https://remarkablemark.org/yaml-json-repl/",
   "devDependencies": {
     "@commitlint/cli": "6.2.0",
     "@commitlint/config-conventional": "6.1.3",
