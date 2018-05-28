@@ -1,6 +1,6 @@
 {
   "name": "yaml-json-repl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A web-based REPL that transforms YAML to JSON.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
